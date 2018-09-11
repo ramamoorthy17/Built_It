@@ -1,0 +1,67 @@
+body {
+    font-family: Muli_Regular;
+}
+.expTabs,.expContTabs{position:absolute;top:0px;left:0px;width:760px;height:586px}
+.tabs{position:absolute;width:230px;height:30px;background:#A7A9AC;display:flex;align-items:center;justify-content:center;color:#000;font-family:Muli_Bold;z-index:1}
+.hit{position:absolute;}
+
+#tab_1{border-right:1px solid #fff;}
+#tab_2{left:231px;border-right:1px solid #fff}
+#tab_3{left:462px;border-right:1px solid #fff}
+#tab_4{left:693px;width:231px;}
+
+.tabsCont{position:absolute;left:0px;top:0px;display:none}
+#tabCont_1{display:block}
+
+ 
+#triangle{position:absolute;left:770px;top:60px;}
+#polygon{position:absolute;left:845px;top:85px}
+#rectangle{position:absolute;left:780px;top:130px}
+#circle{position:absolute;left:850px;top:130px}	
+
+.rotateCanvas{position:absolute;left:20px;bottom:10px;background:red;width:100px;height:20px}
+.dragContainer{position:absolute;width:920px;height:448px;top:45px;}
+.dragContainerClone{position:absolute;width:920px;height:498px;top:45px;}
+.navBar{position:absolute;top:30px;left:0px;width:230px;height:6px;background:#FFCC00;display:none}
+.navBar::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;   
+    bottom: -0.75em;
+    left: 47%;
+    box-sizing: border-box;    
+    border: 0.4em solid black;
+    border-color: transparent transparent #FFCC00 #FFCC00;    
+    transform-origin: 0 0;
+    transform: rotate(-45deg);
+  }
+  
+#canvasContainer{position:absolute;}
+.myContainer{position:absolute;left:152px;top:0px}
+.trayContainer{position:absolute;top:60px;left:746px}
+.objectSlider{position:absolute;width:28px;height:70px;top:170px;cursor:default}
+.breakButton{position:absolute;left:30px;bottom:25px;width:70px;height:69px;background:url('../images/break_part.png');line-height:15px;cursor:pointer;}
+.carImages{transform: rotate(0deg);transform-origin: 50% 50%;} 
+.resetButton,.finishButton{position:absolute;left:20px;bottom:10px;width:80px;height:28px;padding-bottom:2px;background:#a7a9ab;justify-content:center;color:#fff;display:none;align-items:center;cursor:pointer}
+
+.breakButton span, .finishButton span{position: relative;top: 18px;left: 16px;font-size: 14px;line-height:15px;font-family:'Muli_Bold'}
+.helpBlockTopWhite{z-index: 9;height:10px;width:555px;position:absolute;background:white;top:153px}
+.helpBlockBotWhite{z-index: 9;height:10px;width:555px;position:absolute;background:white;bottom:105px}
+.trayDummy{position:absolute;top:230px;left:899px;display:none;cursor:pointer}
+.screenArea{width:924px;height:588px;position: absolute;top:42px;display:block;}
+
+.shadow-pulse {
+    animation-name: shadowPulse;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+ @keyframes shadowPulse {   
+	0% { box-shadow: inset 0 0 30px #FFCC00; border:1px solid #FFCC00;}
+	25% { box-shadow: none; border:1px solid transparent;}
+	50% { box-shadow: inset 0 0 30px #FFCC00;  border:1px solid #FFCC00;}
+	75% { box-shadow: none; border:1px solid transparent;}
+	100% { box-shadow: inset 0 0 30px #FFCC00;  border:1px solid #FFCC00;}   
+}

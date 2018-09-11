@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=924, height=630"/>
+<title>Build It!</title>
+<link href="assets/css/font.css" rel="stylesheet"/>
+<link href="assets/css/style.css" rel="stylesheet"/>
+<link href="assets/css/actstyle.css" rel="stylesheet"/>
+<link href="assets/scrollbar/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
+<link href="assets/css/video.css" rel="stylesheet"/>
+<link href="assets/css/edgeStyle.css" rel="stylesheet"/>
+
+<script src="assets/js/jquery-2.0.0.min.js"></script>
+<script src="assets/js/e-smart-hittest-jquery.min.js"></script>
+<script src="assets/js/jquery-ui.min.js"></script>
+<script src="assets/js/jquery.ui.touch-punch.min.js"></script>
+<script src="assets/js/jquery.rotate.js"></script>
+<script src="assets/js/html2canvas_0.4.1.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="assets/js/script.js"></script>
+<script src="assets/js/eventjs.js"></script>
+<script src="assets/js/myactivity.js"></script>
+<script src="assets/js/videoData.js"></script>
+<script src="assets/js/videoscript.js"></script>
+<script src="assets/js/jquery.preload.js"></script>
+<script>	
+	var imgs = [			
+		'assets/images/template/audio_icon_normal.png',
+		'assets/images/template/audio_icon_play.png',
+		'assets/images/template/camera_icon.png',
+		'assets/images/template/camera_icon_disabled.png',
+		'assets/images/template/close.png',
+		'assets/images/template/info_icon.png',
+		'assets/images/template/left_slider_act.png',
+		'assets/images/template/left_slider_deact.png',
+		'assets/images/template/lslider.png',
+		'assets/images/template/ok_btn.png',
+		'assets/images/template/ok_btn_active.png',
+		'assets/images/template/ok_btn_clkd.png',
+		'assets/images/template/ok_btn_glow.png',
+		'assets/images/template/reset-01.png',
+		'assets/images/template/reset-02.png',
+		'assets/images/template/right_slider_act.png',
+		'assets/images/template/right_slider_deact.png',
+		'assets/images/template/rslider.png',
+		'assets/images/bg/car.png',
+		'assets/images/bg/bridge.png',
+		'assets/images/bg/house.png',
+		'assets/images/bg/playground.png',
+		'assets/images/bg/robot.png',
+		'assets/images/break_over.png',
+		'assets/images/break_part.png',
+		'assets/images/activity/brick_shape/brick_shape_0.png',
+		'assets/images/activity/brick_shape/brick_shape_45.png',
+		'assets/images/activity/brick_shape/brick_shape_90.png',
+		'assets/images/activity/brick_shape/brick_shape_135.png',
+		'assets/images/activity/dcircle_shape/dcircle_shape_0.png',	
+		'assets/images/activity/dcircle_shape/dcircle_shape_45.png',	
+		'assets/images/activity/dcircle_shape/dcircle_shape_90.png',	
+		'assets/images/activity/dcircle_shape/dcircle_shape_135.png',
+		'assets/images/activity/ellipse_shape/ellipse_shape_0.png',	
+		'assets/images/activity/ellipse_shape/ellipse_shape_45.png',	
+		'assets/images/activity/ellipse_shape/ellipse_shape_90.png',	
+		'assets/images/activity/ellipse_shape/ellipse_shape_135.png',	
+		'assets/images/activity/ellipse_shape/ellipse_shape_180.png',	
+		'assets/images/activity/ellipse_shape/ellipse_shape_225.png',	
+		'assets/images/activity/ellipse_shape/ellipse_shape_270.png',	
+		'assets/images/activity/ellipse_shape/ellipse_shape_315.png',
+		'assets/images/activity/hose_shape/hose_shape_0.png',	
+		'assets/images/activity/hose_shape/hose_shape_45.png',	
+		'assets/images/activity/hose_shape/hose_shape_90.png',	
+		'assets/images/activity/hose_shape/hose_shape_135.png',	
+		'assets/images/activity/joint_shape/joint_shape_0.png',
+		'assets/images/activity/joint_shape/joint_shape_45.png',
+		'assets/images/activity/joint_shape/joint_shape_90.png',
+		'assets/images/activity/joint_shape/joint_shape_135.png',
+		'assets/images/activity/plus_shape/plus_shape_0.png',
+		'assets/images/activity/plus_shape/plus_shape_45.png',
+		'assets/images/activity/polygon_shape/polygon_shape_0.png',
+		'assets/images/activity/polygon_shape/polygon_shape_45.png',
+		'assets/images/activity/polygon_shape/polygon_shape_90.png',
+		'assets/images/activity/polygon_shape/polygon_shape_135.png',
+		'assets/images/activity/scale_shape/scale_shape_0.png',
+		'assets/images/activity/scale_shape/scale_shape_45.png',
+		'assets/images/activity/scale_shape/scale_shape_90.png',
+		'assets/images/activity/scale_shape/scale_shape_135.png',
+		'assets/images/activity/scale_shape/scale_shape_180.png',
+		'assets/images/activity/scale_shape/scale_shape_225.png',
+		'assets/images/activity/scale_shape/scale_shape_270.png',
+		'assets/images/activity/scale_shape/scale_shape_315.png',
+		'assets/images/activity/semi_shape/semi_shape_0.png',
+		'assets/images/activity/semi_shape/semi_shape_45.png',
+		'assets/images/activity/semi_shape/semi_shape_90.png',
+		'assets/images/activity/semi_shape/semi_shape_135.png',
+		'assets/images/activity/semi_shape/semi_shape_180.png',
+		'assets/images/activity/semi_shape/semi_shape_225.png',
+		'assets/images/activity/semi_shape/semi_shape_270.png',
+		'assets/images/activity/semi_shape/semi_shape_315.png',
+		'assets/images/activity/square_shape/square_shape_0.png',
+		'assets/images/activity/square_shape/square_shape_45.png',
+		'assets/images/activity/t_shape/t_shape_0.png',
+		'assets/images/activity/t_shape/t_shape_45.png',
+		'assets/images/activity/t_shape/t_shape_90.png',
+		'assets/images/activity/t_shape/t_shape_135.png',
+		'assets/images/activity/t_shape/t_shape_180.png',
+		'assets/images/activity/t_shape/t_shape_225.png',
+		'assets/images/activity/t_shape/t_shape_270.png',
+		'assets/images/activity/t_shape/t_shape_315.png',
+		'assets/images/activity/window_shape/window_shape_0.png',
+		'assets/images/activity/window_shape/window_shape_45.png',
+		'assets/images/activity/window_shape/window_shape_90.png',
+		'assets/images/activity/window_shape/window_shape_135.png',
+		'assets/images/activity/window_shape/window_shape_180.png',
+		'assets/images/activity/window_shape/window_shape_225.png',
+		'assets/images/activity/window_shape/window_shape_270.png',
+		'assets/images/activity/window_shape/window_shape_315.png',
+		'assets/images/activity/brick_shape.png',
+		'assets/images/activity/dcircle_shape.png',
+		'assets/images/activity/ellipse_shape.png',
+		'assets/images/activity/hose_shape.png',
+		'assets/images/activity/joint_shape.png',
+		'assets/images/activity/plus_shape.png',
+		'assets/images/activity/polygon_shape.png',
+		'assets/images/activity/scale_shape.png',
+		'assets/images/activity/semi_shape.png',
+		'assets/images/activity/square_shape.png',
+		'assets/images/activity/t_shape.png',
+		'assets/images/activity/tray.png',
+		'assets/images/activity/window_shape.png'
+	];
+	
+	$.preload(imgs, {
+		each: function (count) {
+		   
+		},
+		all: function () {
+		   $('.preloaderImg').css('display','none');
+		}  
+	});			
+</script>
+</head>
+<body>
+<div class="container">
+ 	<div class="header" >
+    	<span class="activity_title">Trophic Level Game</span>
+		<span class="infoIcon"></span>
+        <span id="rtxt_1" name="welcome" class="rtxt">Welcome</span>
+        <span id="rtxt_2" name="explore" class="rtxt">Explore</span>
+        <span id="rtxt_3" name="activity" class="rtxt">Activity</span>
+    </div>
+	<img src="assets/images/bg/car.png" width="924px" style="position:absolute;top:42px"/>
+	<img class="preloaderImg" src="assets/images/preloader2.gif"/>
+	
+	<div class="screenArea" audio-mode="off">
+		<img src="assets/images/bg/car.png" class="actBg" style="position:absolute"/>
+		<div class="sliderContain"></div>
+		<div id="welcome" class="workArea">
+						
+		</div>
+		<!-- Explore tab -->
+		<div id="explore" class="workArea" data-class="explore">
+			<div class="dragContainer"></div>
+			<div class="dragContainerClone"></div>
+			<div class="expTabs">
+				<div id="tab_1" class="tabs">House</div>
+				<div id="tab_2" class="tabs">Bridge</div>
+				<div id="tab_3" class="tabs">Playground</div>
+				<div id="tab_4" class="tabs">Robot</div>
+				<div class="navBar"></div>
+			</div>
+			
+			<div class="expContTabs">
+				<div id="tabCont_1" class="tabsCont">House</div>
+				<div id="tabCont_2" class="tabsCont">Bridge</div>
+				<div id="tabCont_3" class="tabsCont">Playground</div>
+				<div id="tabCont_4" class="tabsCont">Robot</div>
+			</div>			
+			<div class="resetButton">Reset</div>			
+			<div id="canvasContainer">
+				<img src="assets/images/trayDummy.png" class="trayDummy" style="">
+				<div class="myContainer">
+					<div class="trayContainer">
+						<img src="assets/images/activity/tray.png" />
+						<div class="objectSlider">
+							<img src="assets/images/activity/hose_shape.png" width="60px" style="transform: rotate(90deg);transform-origin: 16% 90%"/>
+						</div>
+					</div>
+				</div>
+			</div>			
+			<div class="exploreLabel_1" style="position:absolute">
+				<div class="expDiv">
+					<div class="expChild"></div>
+				</div>				
+			</div>	
+			<div class="breakButton">
+				<span>Break Apart</span>
+			</div>
+			<div class="buildCar"></div>	
+		</div>		
+		<!-- Activity tab -->
+		<div id="activity" class="workArea" data-class="activity" style="display:none">	
+			<div class="dragContainer"></div>
+			<div class="dragContainerClone"></div>
+			<div class="expTabs">
+				<div id="tab_1" class="tabs">House</div>
+				<div id="tab_2" class="tabs">Bridge</div>
+				<div id="tab_3" class="tabs">Playground</div>
+				<div id="tab_4" class="tabs">Robot</div>
+				<div class="navBar"></div>
+			</div>
+			
+			<div class="expContTabs">
+				<div id="tabCont_1" class="tabsCont">House</div>
+				<div id="tabCont_2" class="tabsCont">Bridge</div>
+				<div id="tabCont_3" class="tabsCont">Playground</div>
+				<div id="tabCont_4" class="tabsCont">Robot</div>
+			</div>
+			
+			<div class="resetButton">Reset</div>
+			<div class="finishButton" style="left:150px">Finish</div>
+			
+			<div id="canvasContainer">
+				<img src="assets/images/trayDummy.png" class="trayDummy" style="">
+				<div class="myContainer">
+					<div class="trayContainer">
+						<img src="assets/images/activity/tray.png" />
+						<div class="objectSlider">
+							<img src="assets/images/activity/hose_shape.png" width="60px" style="transform: rotate(90deg);transform-origin: 16% 90%"/>
+						</div>
+					</div>
+				</div>
+			</div>			
+			<div class="exploreLabel_1" style="position:absolute">
+				<div class="expDiv">
+					<div class="expChild"></div>
+				</div>				
+			</div>	
+			<div class="breakButton">
+				<span>Break Apart</span>
+			</div>
+			<div class="buildCar"></div>
+		</div> 
+		
+		<div class="helpwindow">
+			<div class="helpinner">
+				<div class="helpBlockTopWhite"></div>
+					<div class="help1" data-class="lclass">Background Information</div>
+					<div class="help2" data-class="rclass">Help</div>
+					<div class="helpBlock1"></div>
+					<div class="helpBlock2"></div>
+					<img src="assets/images/template/close.png" width="30px" class="closeIcon"/>
+				<div class="helpBlockBotWhite"></div>
+			</div>
+		</div>		
+    </div>
+	<img src="assets/images/template/camera_icon.png" class="screenIcon" style="display:none"/>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,47 @@
+.expDivVideo{position:absolute;width:360px;background:#fff;height:auto;box-shadow:1px 1px 1px 1px #808080;padding:10px;top:0px;left:0px;padding-bottom:4px}
+.expDivIconVideo{
+    position: absolute;
+    top: 16px;
+    left: 12px;
+}
+.expParaVideo{
+	position: relative;
+    top: -3px;
+    width: auto;
+    left: 10px;
+    height: auto;
+	font-size:16px;
+	font-family:'Muli_Regular';
+}
+.expParaVideo b{font-family:'Muli_Bold'}
+.playButton{position:absolute;left:120px;bottom:-28px;cursor:pointer}
+.rpButton{position:absolute;left:170px;bottom:-28px;cursor:pointer}
+.videoDummy{
+	position:absolute;top:0px;width:924px;height:588px;backround:rgba(0,0,0,0.01)
+}
+#custom-seekbar
+{  
+  cursor: pointer;
+  height: 10px;
+  margin-bottom: 10px;
+  border: 2px solid #FFCC00;
+  overflow: hidden;
+  position: absolute;
+  width: 580px;
+  top:555px;
+  left:230px;
+  border-radius:2px;
+}
+
+#custom-seekbar span
+{
+  background-color: #FFCC00;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 10px;
+  width: 0px;
+}
+
+/* following rule is for hiding Stack Overflow's console  */
+.as-console-wrapper{ display: none !important;}

@@ -1,0 +1,37 @@
+@font-face {
+	font-family: 'Muli_Bold';
+	src: url('../fonts/Muli-Bold.woff');	
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Muli_ExtraBold';
+	src: url('../fonts/Muli-ExtraBold.woff');	
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Muli_Regular';
+	src: url('../fonts/Muli-Regular.woff');	
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Roboto-Bold';
+	src: url('../fonts/Roboto-Bold.woff');	
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Roboto-Black';
+	src: url('../fonts/Roboto-Black.woff');	
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Roboto-Regular';
+	src: url('../fonts/Roboto-Regular.woff');	
+	font-weight: normal;
+	font-style: normal;
+}
